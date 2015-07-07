@@ -1,0 +1,5 @@
+c:\users\akardile\documents\visual studio 2012\Projects\OperatorOverloading\OperatorOverloading\bin\Debug\OperatorOverloading.exe.config
+c:\users\akardile\documents\visual studio 2012\Projects\OperatorOverloading\OperatorOverloading\bin\Debug\OperatorOverloading.exe
+c:\users\akardile\documents\visual studio 2012\Projects\OperatorOverloading\OperatorOverloading\bin\Debug\OperatorOverloading.pdb
+c:\users\akardile\documents\visual studio 2012\Projects\OperatorOverloading\OperatorOverloading\obj\Debug\OperatorOverloading.exe
+c:\users\akardile\documents\visual studio 2012\Projects\OperatorOverloading\OperatorOverloading\obj\Debug\OperatorOverloading.pdb
