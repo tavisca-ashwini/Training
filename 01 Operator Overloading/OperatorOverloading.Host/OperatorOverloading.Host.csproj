@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C22E44A5-B464-4CA3-94C7-F963264EF533}</ProjectGuid>
+    <ProjectGuid>{7641E8E2-89AA-43C1-A24D-635801B62148}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OperatorOverloading</RootNamespace>
-    <AssemblyName>OperatorOverloading</AssemblyName>
+    <RootNamespace>OperatorOverloading.Host</RootNamespace>
+    <AssemblyName>OperatorOverloading.Host</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,12 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Money.cs" />
-    <Compile Include="OperatorOverload.cs" />
+    <Compile Include="Operation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OperatorOverloading.Model\OperatorOverloading.Model.csproj">
+      <Project>{54b778bb-dea3-4927-9dc3-a593fad3c3ef}</Project>
+      <Name>OperatorOverloading.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
