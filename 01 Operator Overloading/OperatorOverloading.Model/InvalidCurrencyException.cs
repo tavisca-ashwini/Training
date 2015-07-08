@@ -5,8 +5,13 @@ using System.Text;
 
 namespace OperatorOverloading.Model
 {
+    [Serializable]
     public class InvalidCurrencyException : Exception
     {
-        public string msg = "Invalid Currency";
+        public string msg { get; set; }
+        public InvalidCurrencyException(string msg)
+            : base(msg)
+        {
+        }
     }
 }

@@ -12,33 +12,37 @@ namespace OperatorOverloading.Host
        static void Main(string[] args)
         {
            double money = 0.0;
-           string tempCurrency = " ";
+           string tempCurrency = null;
 
            Money money1 = new Money();
            Money money2 = new Money();
            Money money3 = new Money();
 
-           Console.WriteLine("Enter Amount for Money1");
-           money = Convert.ToDouble(Console.ReadLine());
-           Console.WriteLine("Enter Currency for Money1");
-           tempCurrency = Convert.ToString(Console.ReadLine());
+           /*obtaining values or first object*/
+           Console.WriteLine("Enter Amount for first object");
+           while (!double.TryParse(Console.ReadLine(), out money))
+           {
+               Console.WriteLine(" Enter valid entry for money");
+           }
+           Console.WriteLine("Enter Currency for first object");
+           tempCurrency = Console.ReadLine();
 
+           /*assigning values to object*/
            money1.Amount = money;
            money1.Currency = tempCurrency;
 
-           Console.WriteLine("Enter Amount for Money2");
-           money = Convert.ToDouble(Console.ReadLine());
-           Console.WriteLine("Enter Currency for Money2");
-           tempCurrency = Convert.ToString(Console.ReadLine());
+           /*obtaining values or second object*/
+           Console.WriteLine("Enter Amount for second object ");
+           while (!double.TryParse(Console.ReadLine(), out money))
+           {
+               Console.WriteLine(" Enter valid entry for money");
+           }
+           Console.WriteLine("Enter Currency for second object");
+           tempCurrency = Console.ReadLine();
            
            money2.Amount = money;
            money2.Currency = tempCurrency;
 
-           if (money1.Amount < 0 || money2.Amount < 0)
-           {
-               Console.WriteLine("Enter valid Amount");
-               return;
-           }
            try
            {
                money3 = money1 + money2;
@@ -50,9 +54,17 @@ namespace OperatorOverloading.Host
                Console.ReadKey();
                return;
            }
+           catch (OverflowException e)
+           {
+               Console.WriteLine("" + e.Message);
+               Console.WriteLine("");
+               Console.ReadKey();
+               return;
+           }
            Console.WriteLine("Amount entered :  " +money1.Amount + " Currency for Amount :" +money1.Currency);
            Console.WriteLine("Amount entered :  " + money2.Amount + " Currency for Amount : " + money2.Currency);
            Console.WriteLine("Addtion is Done");
+           Console.WriteLine("");
            Console.WriteLine("Amount after addition : " + money3.Amount + "Currency for Amount : " + money3.Currency);
            Console.ReadKey();
         }

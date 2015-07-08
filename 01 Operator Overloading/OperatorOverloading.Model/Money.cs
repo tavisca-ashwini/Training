@@ -8,55 +8,48 @@ namespace OperatorOverloading.Model
 {
     public class Money
     {
-        private double amount;
-        private string currency;
+        public double Amount { get; set; }
+        public string Currency { get; set; }
 
-        public double Amount
+        public Money(double money, string tempCurrency)
         {
-            get 
-            { 
-               return this.amount; 
-            }
-            set 
-            {
-                this.amount = value;
-            }
-        }
-        public string Currency
-        {
-            get
-            {
-                return this.currency;
-            }
-            set
-            {
-                this.currency = value;
-            } 
-        }
-        public Money(int money, string tempCurrency)
-        {
-            this.amount = money;
-            this.currency = tempCurrency;
+            this.Amount = money;
+            this.Currency = tempCurrency;
         }
         public Money()
         {
 
         }
+
+        //operator + is overloaded
         public static Money operator +(Money Money1, Money Money2)
         {
+            string currency;
+            double money = 0.0;
             Money Money3 = new Money();
 
-            if (Money1.Currency.Equals(Money2.Currency))
+            if (!string.IsNullOrEmpty(Money1.Currency) && !string.IsNullOrEmpty(Money2.Currency) && string.Equals(Money1.Currency, Money2.Currency, StringComparison.OrdinalIgnoreCase))
             {
+                currency = Money1.Currency.ToUpper();
                 Money3.Amount = Money1.Amount + Money2.Amount;
+                Money3.Currency = Money1.Currency;
+
+                if (Money1.Amount <= (double.MaxValue - Money2.Amount))
+                {
+                    money = Money3.Amount;
+                }
+                else
+                {
+                    throw new OverflowException("Amount Overflowing");
+                }
             }
             else
             {
-                throw new InvalidCurrencyException();   //exception thrown
+                throw new InvalidCurrencyException("Invalid Currency");   //exception thrown
             }
-
-            Money3.Currency = Money1.Currency;
             return Money3;
         }
     }
 }
+                    
+        
