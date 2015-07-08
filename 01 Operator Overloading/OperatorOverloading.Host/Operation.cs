@@ -18,22 +18,19 @@ namespace OperatorOverloading.Host
            Money money2 = new Money();
            Money money3 = new Money();
 
-           /*obtaining values or first object*/
            Console.WriteLine("Enter Amount for first object");
-           while (!double.TryParse(Console.ReadLine(), out money))
+           while (double.TryParse(Console.ReadLine(), out money)== false)
            {
                Console.WriteLine(" Enter valid entry for money");
            }
            Console.WriteLine("Enter Currency for first object");
            tempCurrency = Console.ReadLine();
 
-           /*assigning values to object*/
            money1.Amount = money;
            money1.Currency = tempCurrency;
 
-           /*obtaining values or second object*/
            Console.WriteLine("Enter Amount for second object ");
-           while (!double.TryParse(Console.ReadLine(), out money))
+           while (double.TryParse(Console.ReadLine(), out money)== false)
            {
                Console.WriteLine(" Enter valid entry for money");
            }
@@ -47,25 +44,18 @@ namespace OperatorOverloading.Host
            {
                money3 = money1 + money2;
            }
-           catch (InvalidCurrencyException ex) // catched exception
+           catch (Exception ex) // catched exception
            {
-               Console.WriteLine("" + ex.msg);
-               Console.WriteLine("");
+               Console.WriteLine("" + ex.Message);
                Console.ReadKey();
                return;
            }
-           catch (OverflowException e)
-           {
-               Console.WriteLine("" + e.Message);
-               Console.WriteLine("");
-               Console.ReadKey();
-               return;
-           }
-           Console.WriteLine("Amount entered :  " +money1.Amount + " Currency for Amount :" +money1.Currency);
-           Console.WriteLine("Amount entered :  " + money2.Amount + " Currency for Amount : " + money2.Currency);
+
+           Console.WriteLine(money1.ToString());
+           Console.WriteLine(money2.ToString());
            Console.WriteLine("Addtion is Done");
            Console.WriteLine("");
-           Console.WriteLine("Amount after addition : " + money3.Amount + "Currency for Amount : " + money3.Currency);
+           Console.WriteLine(money3.ToString());
            Console.ReadKey();
         }
     }
