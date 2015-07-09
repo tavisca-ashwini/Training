@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Training_1", "Training_1\Training_1.csproj", "{1131A050-C06C-4116-9BE1-0CFC2B83C8A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Operator Overloading", "01 Operator Overloading", "{F2667E0B-C585-4B53-B57E-A333A673E18E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Model", "01 Operator Overloading\OperatorOverloading.Model\OperatorOverloading.Model.csproj", "{54B778BB-DEA3-4927-9DC3-A593FAD3C3EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Host", "01 Operator Overloading\OperatorOverloading.Host\OperatorOverloading.Host.csproj", "{7641E8E2-89AA-43C1-A24D-635801B62148}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1131A050-C06C-4116-9BE1-0CFC2B83C8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1131A050-C06C-4116-9BE1-0CFC2B83C8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1131A050-C06C-4116-9BE1-0CFC2B83C8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1131A050-C06C-4116-9BE1-0CFC2B83C8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B778BB-DEA3-4927-9DC3-A593FAD3C3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B778BB-DEA3-4927-9DC3-A593FAD3C3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B778BB-DEA3-4927-9DC3-A593FAD3C3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B778BB-DEA3-4927-9DC3-A593FAD3C3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7641E8E2-89AA-43C1-A24D-635801B62148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7641E8E2-89AA-43C1-A24D-635801B62148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7641E8E2-89AA-43C1-A24D-635801B62148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7641E8E2-89AA-43C1-A24D-635801B62148}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54B778BB-DEA3-4927-9DC3-A593FAD3C3EF} = {F2667E0B-C585-4B53-B57E-A333A673E18E}
+		{7641E8E2-89AA-43C1-A24D-635801B62148} = {F2667E0B-C585-4B53-B57E-A333A673E18E}
+	EndGlobalSection
+EndGlobal
