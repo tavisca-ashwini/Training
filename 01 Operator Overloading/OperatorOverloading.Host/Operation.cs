@@ -54,7 +54,6 @@ namespace OperatorOverloading.Host
            Console.WriteLine(money1.ToString());
            Console.WriteLine(money2.ToString());
            Console.WriteLine("Addtion is Done");
-           Console.WriteLine("");
            Console.WriteLine(money3.ToString());
            Console.ReadKey();
         }
