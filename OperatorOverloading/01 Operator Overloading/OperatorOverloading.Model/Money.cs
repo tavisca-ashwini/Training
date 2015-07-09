@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OperatorOverloading.DBL;
+using OperatorOverloading.Parse;
 
 namespace OperatorOverloading.Model
 {
     public class Money
     {
+        Conversion currConversion = new Conversion();
         private string _currency;
-
+        
         public double Amount
         {
             get;
@@ -38,6 +41,11 @@ namespace OperatorOverloading.Model
         public Money()
         {
         }
+
+        public double ConvertCurrency(string source, string target)
+        {
+            return (currConversion.GetCurrencyConversion(source,target));
+        }
         //operator + is overloaded
         public static Money operator +(Money Money1, Money Money2)
         {
@@ -58,12 +66,13 @@ namespace OperatorOverloading.Model
                     throw new OverflowException(Messages.Overfolw);
                 }
             }
-            else
+            /*else
             {
                 throw new InvalidCurrencyException(Messages.InvalidCurrency);   //exception thrown
-            }
+            }*/
             return Money3;
         }
+
         public override string ToString()
         {
             StringBuilder show = new StringBuilder();
