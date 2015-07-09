@@ -123,7 +123,7 @@
   <data name="InvalidCurrency" xml:space="preserve">
     <value>Invalid Currency</value>
   </data>
-  <data name="NullValues" xml:space="preserve">
+  <data name="MoneyNullValues" xml:space="preserve">
     <value>Enter values for the operation</value>
   </data>
   <data name="OutOfRange" xml:space="preserve">

@@ -9,7 +9,6 @@ namespace OperatorOverloading.Model
     [Serializable]
     class InvalidCurrencyException : Exception
     {
-        public string msg { get; set; }
         public InvalidCurrencyException(string msg) : base (msg)
         {
         }
