@@ -58,35 +58,36 @@ namespace OperatorOverloading.Model
 
             Money Money3 = new Money();
 
-            if (string.Equals(Money1.Currency, Money2.Currency, StringComparison.OrdinalIgnoreCase) == false)  // checking whether both currencies are equal or not
+            if (Money1.Currency.Equals(Money2.Currency , StringComparison.OrdinalIgnoreCase))  // checking whether both currencies are equal or not
             {
-                throw new InvalidCurrencyException();   //exception thrown
-            }
+                currency = Money1.Currency.ToUpper(); // used to convert the currency into Uppercase
+                Money3.Amount = Money1.Amount + Money2.Amount;
+                Money3.Currency = Money1.Currency;
 
-            currency = Money1.Currency.ToUpper(); // used to convert the currency into Uppercase
-            Money3.Amount = Money1.Amount + Money2.Amount;
-            Money3.Currency = Money1.Currency;
+                if (double.IsInfinity(Money3.Amount))     //cheked infinity for amount for exception
+                {
+                    throw new OutOfRangeException();
+                }
 
-            if (double.IsInfinity(Money3.Amount))     //cheked infinity for amount for exception
-            {
-                throw new OutOfRangeException();
-            }
-
-            if (Money1.Amount <= (double.MaxValue - Money2.Amount))
-            {
-                money = Money3.Amount;
+                if (Money1.Amount <= (double.MaxValue - Money2.Amount))
+                {
+                    money = Money3.Amount;
+                }
+                else
+                {
+                    throw new OverflowException(messages.Overfolw);
+                }
             }
             else
             {
-                throw new OverflowException(messages.Overfolw);
+                throw new InvalidCurrencyException();   //exception thrown
             }
             return Money3;
         }
-
         public override string ToString()
         {
             StringBuilder show = new StringBuilder();
-            show.Append("New_Amount" + this.Amount + "New_Currency" + this.Currency);
+            show.Append("New_Amount : " + this.Amount + " " + "New_Currency : " + this.Currency);
             return show.ToString();
         }
     }

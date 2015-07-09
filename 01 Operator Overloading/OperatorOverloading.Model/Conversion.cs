@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,33 +13,33 @@ namespace OperatorOverloading.Model
         {
             double amount1;
 
-            string sURL;
-            sURL = "http://www.apilayer.net/api/live?access_key=9f011e5b35e7990d360073da30a7f8f2";
+            string webURL;
+            webURL = "http://www.apilayer.net/api/live?access_key=9f011e5b35e7990d360073da30a7f8f2";
 
             WebRequest wrGETURL;
-            wrGETURL = WebRequest.Create(sURL);
+            wrGETURL = WebRequest.Create(webURL);
 
             WebProxy myProxy = new WebProxy("myproxy", 80);
             myProxy.BypassProxyOnLocal = true;
 
-            wrGETURL.Proxy = WebProxy.GetDefaultProxy();
+            Stream streamObject;
+            streamObject = wrGETURL.GetResponse().GetResponseStream();
 
-            Stream objStream;
-            objStream = wrGETURL.GetResponse().GetResponseStream();
+            StreamReader objReader = new StreamReader(streamObject);
 
-            StreamReader objReader = new StreamReader(objStream);
-
-            string sLine = null;
+            string stringLine = "";
             int i = 0;
             int j=0;
-            string CompleteString = null;
-            while (sLine != null)
+            string CompleteString = "";
+            while (stringLine != null)
             {
                 i++;
-                sLine = objReader.ReadLine();
-                if (sLine != null)
-                    CompleteString += sLine;
+                stringLine = objReader.ReadLine();
+                if (stringLine != null)
+                    CompleteString += stringLine;
             }
+            
+            
             string[] SplittedString = CompleteString.Split(',');
 
             for (j = 0; j < SplittedString.Length; j++)

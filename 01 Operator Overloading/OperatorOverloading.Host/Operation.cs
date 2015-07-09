@@ -7,9 +7,9 @@ using OperatorOverloading.Model;
 
 namespace OperatorOverloading.Host
 {
-    class Operation
+   class Operation
     {
-       static void Main(string[] args)
+        static void Main(string[] args)
         {
            double money = 0.0;
            string tempCurrency = null;
@@ -53,7 +53,9 @@ namespace OperatorOverloading.Host
 
            Console.WriteLine(money1.ToString());
            Console.WriteLine(money2.ToString());
-           Console.WriteLine("Addtion is Done");
+           Console.WriteLine("");
+           Console.WriteLine("After Addition");
+           Console.WriteLine("");
            Console.WriteLine(money3.ToString());
            Console.ReadKey();
         }

@@ -12,24 +12,26 @@ namespace OperatorOverloading.Host
         public static void Main(string[] args)
         {
             double tempAmount;
-            double count;
+            double number;
             string currency;
 
-            ConvertCurrency currConvert = new ConvertCurrency();
+            Conversion currConvert = new Conversion();
 
-            Console.WriteLine("Enter Amount in USD (currency)");
+            Console.WriteLine("Enter Amount and Currency");
+            //currency = Console.ReadLine();
             if (double.TryParse(Console.ReadLine(), out tempAmount))
             {
-                count = tempAmount;
+                number = tempAmount;
             }
             else
             {
                 throw new Exception("Not a valid currency");
             }
+
             Console.WriteLine("Enter the Currency for conversion");
             currency = Console.ReadLine();
-
-            Console.WriteLine("{0} USD Equals to {1} {2}" + count, currConvert.Converts(count, currency), currency);
+            Console.WriteLine("{0} USD Equals to {1}{2}" ,number, currConvert.Converts(number, currency), currency);
+            Console.ReadKey();
         }
     }
 }
