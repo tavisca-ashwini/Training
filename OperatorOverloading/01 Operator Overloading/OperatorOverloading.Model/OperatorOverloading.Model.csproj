@@ -63,9 +63,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\OperatorOverloading.DBL.csproj">
+    <ProjectReference Include="..\ClassLibrary1\OperatorOverloading.Dbl.csproj">
       <Project>{b1296f0f-44a9-448a-bc19-d1b565b948ca}</Project>
-      <Name>OperatorOverloading.DBL</Name>
+      <Name>OperatorOverloading.Dbl</Name>
     </ProjectReference>
     <ProjectReference Include="..\OperatorOverloading.Host\OperatorOverloading.Parse\OperatorOverloading.Parse.csproj">
       <Project>{fa2bf3c4-a1ec-451a-9214-24c725899f7b}</Project>

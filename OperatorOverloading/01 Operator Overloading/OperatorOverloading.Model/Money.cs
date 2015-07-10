@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OperatorOverloading.DBL;
 using OperatorOverloading.Parse;
+using OperatorOverloading.Dbl;
+using System.Text.RegularExpressions;
+
 
 namespace OperatorOverloading.Model
 {
     public class Money
     {
-        Conversion currConversion = new Conversion();
         private string _currency;
         
         public double Amount
@@ -22,16 +23,16 @@ namespace OperatorOverloading.Model
         {
             set
             {
-                if (string.IsNullOrWhiteSpace(value) || value.Length != 3)
-                {
-                    throw new Exception(Messages.CurrencyEmpty);
-                }
                 _currency = value;
             }
             get
             {
                 return _currency;
             }
+        }
+        public Money(string targetCurrency)
+        {
+            Currency = targetCurrency;
         }
         public Money(double money, string tempCurrency)
         {
@@ -41,11 +42,6 @@ namespace OperatorOverloading.Model
         public Money()
         {
         }
-
-        public double ConvertCurrency(string source, string target)
-        {
-            return (currConversion.GetCurrencyConversion(source,target));
-        }
         //operator + is overloaded
         public static Money operator +(Money Money1, Money Money2)
         {
@@ -53,26 +49,25 @@ namespace OperatorOverloading.Model
             {
                 throw new Exception(Messages.MoneyNullValues);
             }
-
             Money Money3 = new Money();
-
             if (Money1.Currency.Equals(Money2.Currency , StringComparison.OrdinalIgnoreCase))  // checking whether both currencies are equal or not
             {
                 Money3.Amount = Money1.Amount + Money2.Amount;
-                Money3.Currency = Money1.Currency.ToUpper();
-
-                if (double.IsInfinity(Money3.Amount))     //cheked infinity for amount for exception
-                {
-                    throw new OverflowException(Messages.Overfolw);
-                }
             }
-            /*else
-            {
-                throw new InvalidCurrencyException(Messages.InvalidCurrency);   //exception thrown
-            }*/
+            Money3.Currency = Money1.Currency.ToUpper();
             return Money3;
         }
 
+        public double CurrencyConversion(double amount, string sourceCurrency, string targetCurrency)
+        {
+            if (string.IsNullOrWhiteSpace(targetCurrency) || string.IsNullOrWhiteSpace(sourceCurrency) || targetCurrency.Length != 3 || Regex.IsMatch(targetCurrency, @"^[a-zA-Z]+$") == false)
+            {
+                throw new ArgumentException("Currency is Null");
+            }
+            Conversion currencyConversion = new Conversion();
+            double convertValue = currencyConversion.GetCurrencyConversion(Amount, Currency, targetCurrency.ToUpper());
+            return convertValue;
+        }
         public override string ToString()
         {
             StringBuilder show = new StringBuilder();
