@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace OperatorOverloading.Parse
 {
-    public interface CurrencyParser
+    public interface IExchangeRateProvider
     {
-        double GetCurrencyConversion(double amount, string currencySource , string currencyTarget);
+        double GetExchangeRate(string currencySource , string currencyTarget);
     }
 }

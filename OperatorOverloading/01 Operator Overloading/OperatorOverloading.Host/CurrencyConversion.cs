@@ -12,27 +12,35 @@ namespace OperatorOverloading.Host
     {
         static void Main(string[] args)
         {
+            double money = 0.0;
+            string sourceCurrency = null;
             try
             {
-                Console.WriteLine("Enter Amount in Format : 100 USD");
-                string input = Console.ReadLine();
-                string[] source = input.Split(' ');
-                double amount=0.0;
-                if (double.TryParse(source[0], out amount) == false)
-                    Console.WriteLine("Invalid amount.");
+                Console.WriteLine("\nEnter Amount : ");
+                while (double.TryParse(Console.ReadLine(), out money) == false)
+                {
+                    Console.WriteLine(" Enter valid entry for money");
+                }
+                Console.WriteLine("Enter Currency");
+                sourceCurrency = Console.ReadLine();
 
-                var money1 = new Money(amount,source[1]);
-
-                Console.WriteLine("\nEnter target Currency in which want to Convert: ");
+                Money money1 = new Money(money,sourceCurrency);
+                
+                Console.WriteLine("\nEnter target Currency : ");
                 string target = Console.ReadLine();
-                Console.WriteLine("Converted Amount : ");
+                Console.WriteLine("\nExchanged Amount : ");
+                var money2 = new Money(target);
 
-                double conversionRate = money1.CurrencyConversion(money1.Amount, money1.Currency, target);
-                Console.WriteLine("{0} {1}", conversionRate, target.ToUpper());
+                double exchangedRate = money1.Convert(money1.Amount, money1.Currency, money2.Currency);
+                Console.WriteLine("{0} {1}", exchangedRate, target.ToUpper());
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex);
             }
             Console.ReadKey();
         }

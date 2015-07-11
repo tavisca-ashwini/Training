@@ -39,12 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InvalidCurrencyException.cs" />
     <Compile Include="Messages1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.resx</DependentUpon>
     </Compile>
     <Compile Include="Money.cs" />
+    <Compile Include="OutOfRangeException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -67,9 +69,9 @@
       <Project>{b1296f0f-44a9-448a-bc19-d1b565b948ca}</Project>
       <Name>OperatorOverloading.Dbl</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OperatorOverloading.Host\OperatorOverloading.Parse\OperatorOverloading.Parse.csproj">
+    <ProjectReference Include="..\OperatorOverloading.Host\OperatorOverloading.Parse\OperatorOverloading.Interfaces.csproj">
       <Project>{fa2bf3c4-a1ec-451a-9214-24c725899f7b}</Project>
-      <Name>OperatorOverloading.Parse</Name>
+      <Name>OperatorOverloading.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
