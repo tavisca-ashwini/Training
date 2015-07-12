@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OperatorOverloading.Parse;
+using System.Configuration;
 
 namespace OperatorOverloading.Dbl
 {
@@ -17,7 +18,7 @@ namespace OperatorOverloading.Dbl
             string line;
             string completeData = "";
 
-            System.IO.StreamReader file = new System.IO.StreamReader("C:/Users/akardile/Desktop/Json.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(ConfigurationManager.AppSettings["Path"]);
             while ((line = file.ReadLine()) != null)
             {
                 completeData += line;
