@@ -23,7 +23,7 @@ namespace OperatorOverloading.Host
                 }
                 Console.WriteLine("Enter Currency");
                 sourceCurrency = Console.ReadLine();
-
+                
                 Money money1 = new Money(money,sourceCurrency);
                 
                 Console.WriteLine("\nEnter target Currency : ");

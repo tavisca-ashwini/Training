@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
-namespace WebServerTest
+namespace WebServer
 {
     public class FileHandler
     {
@@ -25,6 +24,11 @@ namespace WebServerTest
         {
             byte[] content = File.ReadAllBytes(_contentPath + path);
             return content;
+        }
+
+        internal static bool FileExists(string requestFile)
+        {
+            throw new NotImplementedException();
         }
     }
 }

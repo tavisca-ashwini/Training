@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebServerTest
+namespace WebServer
 {
     public class RequestParser
     {
-        private Encoding _charEncoder = Encoding.UTF8;
+        private Encoding _charEncoder = Encoding.UTF32;
         public string HttpMethod;
         public string HttpUrl;
         public string HttpProtocolVersion;
@@ -18,7 +18,6 @@ namespace WebServerTest
             try
             {
                 string[] tokens = requestString.Split(' ');
-
                 tokens[1] = tokens[1].Replace("/", "\\");
                 HttpMethod = tokens[0].ToUpper();
                 HttpUrl = tokens[1];
@@ -27,10 +26,10 @@ namespace WebServerTest
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-                Console.WriteLine(ex.InnerException.Message);
-                Console.WriteLine("Bad Request");
+                if(ex.InnerException != null)
+                    Console.WriteLine(ex.InnerException.Message);
+                Console.WriteLine("Wrong Request");
             }
         }
     }
 }
-     

@@ -1,54 +1,41 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Sockets;
-using System.Threading;
-using Microsoft.Win32;
 using System.IO;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
 
-namespace WebServerTest
+namespace WebServer
 {
-    public class CreateResponse
+    class TextRequestHandler : IProcessor
     {
-        RegistryKey registryKey = Registry.ClassesRoot;
         public Socket ClientSocket = null;
-        private Encoding _charEncoder = Encoding.UTF8;
         private string _contentPath;
-        public FileHandler FileHandler;
-        public CreateResponse(Socket clientSocket, string contentPath)
+        RegistryKey registryKey = Registry.ClassesRoot;
+        private Encoding _charEncoder = Encoding.UTF32;
+
+        public TextRequestHandler(Socket clientSocket , string contentPath)
         {
             _contentPath = contentPath;
             ClientSocket = clientSocket;
-            FileHandler = new FileHandler(_contentPath);
+            FileHandler FileHandler = new FileHandler (contentPath);
         }
-        public void RequestUrl(string requestedFile)
+        public void Get(string requestFile)  
         {
-            int dotIndex = requestedFile.LastIndexOf('.') + 1;
-            if (dotIndex > 0)
-            {
-                if (FileHandler.DoesFileExists(requestedFile))    //If yes check existence of the file
-                    SendResponse(ClientSocket, FileHandler.ReadFile(requestedFile), "200 Ok", GetTypeOfFile(registryKey, (_contentPath + requestedFile)));
-                else
-                    SendErrorResponce(ClientSocket);
-            }
+            if (FileHandler.FileExists(requestFile))
+                SendResponse(ClientSocket, FileHandler.ReadFile(requestFile), "200 Ok", GetTypeOfFile(registryKey, (_contentPath + requestFile)));
             else
-            {
-                if (FileHandler.DoesFileExists("\\index.htm"))
-                    SendResponse(ClientSocket, FileHandler.ReadFile("\\index.htm"), "200 Ok", "text/html");
-                else
-                    SendErrorResponce(ClientSocket);
-            }
+                SendErrorResponce(ClientSocket);
+        }
+        public void DoPost()
+        {
+            throw new NotImplementedException();
         }
         private string GetTypeOfFile(RegistryKey registryKey, string fileName)
         {
             RegistryKey fileClass = registryKey.OpenSubKey(Path.GetExtension(fileName));
             return fileClass.GetValue("Content Type").ToString();
-        }
-        private void SendErrorResponce(Socket clientSocket)
-        {
-            SendResponse(clientSocket, null, "404 Not Found", "text/html");
         }
         private void SendResponse(Socket clientSocket, byte[] byteContent, string responseCode, string contentType)
         {
@@ -59,9 +46,15 @@ namespace WebServerTest
                 clientSocket.Send(byteContent);
                 clientSocket.Close();
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
             }
+        }
+        private void SendErrorResponce(Socket clientSocket)
+        {
+            byte[] emptyByteArray = new byte[0];
+            SendResponse(clientSocket, emptyByteArray, "404 Not Found", "text/html");
         }
         private byte[] CreateHeader(string responseCode, int contentLength, string contentType)
         {
@@ -70,6 +63,10 @@ namespace WebServerTest
                                   + "Content-Length: " + contentLength + "\r\n"
                                   + "Connection: close\r\n"
                                   + "Content-Type: " + contentType + "\r\n\r\n");
+        }
+        public void Post()
+        {
+            throw new NotImplementedException();
         }
     }
 }

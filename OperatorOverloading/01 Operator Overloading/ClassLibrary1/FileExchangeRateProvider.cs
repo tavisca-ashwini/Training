@@ -32,7 +32,6 @@ namespace OperatorOverloading.Dbl
 
             double converter1 = GetConverter(sourceCurrency);
             double converter2 = GetConverter(targetCurrency);
-
             return (converter2/converter1);
         }
         public static double GetConverter(string sourceCurrency)
@@ -46,9 +45,8 @@ namespace OperatorOverloading.Dbl
                  if (currencySeperatedString[j].Contains(currency) == true)
                      break;
              }
-             string[] finalSplit = currencySeperatedString[j].Split(':');
+             string[] finalSplit = currencySeperatedString[j--].Split(':');
              double multiplier = Convert.ToDouble(finalSplit[1]);
-
              return multiplier;
          }     
     }

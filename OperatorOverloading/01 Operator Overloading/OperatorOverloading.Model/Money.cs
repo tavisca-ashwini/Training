@@ -52,13 +52,11 @@ namespace OperatorOverloading.Model
         {
             this.Currency = source;
         }
-
+       
+        // Code for Currency conversion Rate 
         FileExchangeRateProvider fileExchangeRateProvider = new FileExchangeRateProvider();
-      
-
         public  double Convert(double amount, string sourceCurrency, string targetCurrency)
         {
-           
             double exchangeRate = fileExchangeRateProvider.GetExchangeRate(sourceCurrency, targetCurrency);
             return exchangeRate * amount;
         }
