@@ -15,6 +15,7 @@ namespace WebServer
         private Socket _clientSocket = null;
         public FactoryHandler factoryHandler = new FactoryHandler();
         private Encoding _charEncoder = Encoding.UTF32;
+        
 
         public Dispatcher(Socket clientSocket)
         {
@@ -38,7 +39,7 @@ namespace WebServer
             
             if(dotIndex > 0)    
             {
-                var requestHandler = FactoryHandler.CreateHandler(requestParser.HttpUrl, _clientSocket, ConfigurationSettings.AppSettings["Path"]);
+                var requestHandler = factoryHandler.CreateHandler(requestParser.HttpUrl, _clientSocket, ConfigurationManager.AppSettings["Path"]);
                 if (requestParser.HttpMethod.Equals("get", StringComparison.InvariantCultureIgnoreCase))
                 {
                     requestHandler.Get(requestParser.HttpUrl);
@@ -51,7 +52,7 @@ namespace WebServer
             }
             else
             {
-                TextRequestHandler htmlRequestHandler = new TextRequestHandler(_clientSocket , ConfigurationSettings.AppSettings["Path"]);
+                TextRequestHandler htmlRequestHandler = new TextRequestHandler(_clientSocket, ConfigurationManager.AppSettings["Path"]);
                 htmlRequestHandler.Get(requestParser.HttpUrl);
             }
             StopClientSocket(_clientSocket);

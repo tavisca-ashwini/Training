@@ -12,8 +12,9 @@ namespace WebServer
     {
         public Socket ClientSocket = null;
         private string _contentPath;
-        RegistryKey registryKey = Registry.ClassesRoot;
+        private RegistryKey _registryKey = Registry.ClassesRoot;
         private Encoding _charEncoder = Encoding.UTF32;
+        private FileHandler _fileHandler = null;
 
         public TextRequestHandler(Socket clientSocket , string contentPath)
         {
@@ -24,7 +25,7 @@ namespace WebServer
         public void Get(string requestFile)  
         {
             if (FileHandler.FileExists(requestFile))
-                SendResponse(ClientSocket, FileHandler.ReadFile(requestFile), "200 Ok", GetTypeOfFile(registryKey, (_contentPath + requestFile)));
+                SendResponse(ClientSocket, _fileHandler.ReadFile(requestFile), "200 Ok", GetTypeOfFile(_registryKey, (_contentPath + requestFile)));
             else
                 SendErrorResponce(ClientSocket);
         }
