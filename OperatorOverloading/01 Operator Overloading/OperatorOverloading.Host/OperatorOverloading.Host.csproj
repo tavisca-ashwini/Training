@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,13 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Operation.cs" />
+    <Compile Include="CurrencyConversion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\OperatorOverloading.Dbl.csproj">
+      <Project>{b1296f0f-44a9-448a-bc19-d1b565b948ca}</Project>
+      <Name>OperatorOverloading.Dbl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OperatorOverloading.Model\OperatorOverloading.Model.csproj">
       <Project>{54b778bb-dea3-4927-9dc3-a593fad3c3ef}</Project>
       <Name>OperatorOverloading.Model</Name>

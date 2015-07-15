@@ -5,7 +5,8 @@ using System.Text;
 
 namespace OperatorOverloading.Model
 {
-    class InvalidCurrencyException : Exception
+    class OutOfRangeException : Exception
     {
+
     }
 }
