@@ -1,0 +1,5 @@
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.CustomAttribute\bin\Debug\TestingAttribute.CustomAttribute.dll
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.CustomAttribute\bin\Debug\TestingAttribute.CustomAttribute.pdb
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.CustomAttribute\obj\Debug\TestingAttribute.CustomAttribute.csprojResolveAssemblyReference.cache
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.CustomAttribute\obj\Debug\TestingAttribute.CustomAttribute.dll
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.CustomAttribute\obj\Debug\TestingAttribute.CustomAttribute.pdb

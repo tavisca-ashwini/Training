@@ -1,0 +1,7 @@
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\bin\Debug\TestingAttribute.Model.dll
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\bin\Debug\TestingAttribute.Model.pdb
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\obj\Debug\TestingAttribute.Model.csprojResolveAssemblyReference.cache
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\obj\Debug\TestingAttribute.Model.dll
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\obj\Debug\TestingAttribute.Model.pdb
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\bin\Debug\TestingAttribute.CustomAttribute.dll
+D:\UnitTest\TestingAttribute.Host\TestAttribute.Model\bin\Debug\TestingAttribute.CustomAttribute.pdb

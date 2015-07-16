@@ -1,0 +1,10 @@
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.Host.exe.config
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.Host.exe
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.Host.pdb
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.Model.dll
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.Model.pdb
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribute.Host.csprojResolveAssemblyReference.cache
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribute.Host.exe
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribute.Host.pdb
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.CustomAttribute.dll
+D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.CustomAttribute.pdb
