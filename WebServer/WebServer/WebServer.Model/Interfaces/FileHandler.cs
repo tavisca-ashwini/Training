@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebServer.Model;
-using WebServer.Interfaces;
+using System.Configuration;
+using WebServer.Model.Interfaces;
 
-namespace WebServer.Handler
+
+namespace WebServer.Model
 {
-    class FileHandler : IProcessor
+    public class FileHandler : IProcessor
     {
         private static string _typesIncluded = ConfigurationManager.AppSettings["file-handler"];
 
@@ -26,6 +27,14 @@ namespace WebServer.Handler
             }
             response.Body = File.ReadAllBytes(request.Path);
             return response;
+        }
+        public string TypesIncluded
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_typesIncluded)) throw new Exception("Supported types for Static File Handler not defined");
+                return _typesIncluded;
+            }
         }
     }
 }

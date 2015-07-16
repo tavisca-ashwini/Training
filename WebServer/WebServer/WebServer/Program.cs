@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using WebServer.Model;
 
 namespace WebServer
 {
@@ -27,8 +28,9 @@ namespace WebServer
 
                 Console.WriteLine("Server started");
 
-                server.Stop();
+                
                 Console.ReadKey();
+                server.Stop();
             }
             catch (Exception ex)
             {

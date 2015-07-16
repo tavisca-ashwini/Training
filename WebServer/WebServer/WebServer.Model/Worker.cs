@@ -28,7 +28,7 @@ namespace WebServer.Model
                 response.Status = ErrorCodes.ERROR_CODE_200;
                 response.Message = "OK";
             }
-            catch (ResourceNotFoundException resourceNotFound)
+            catch (ResourceUnavailable resourceNotFound)
             {
                 response = new Response(this._request);
                 response.Status = ErrorCodes.ERROR_CODE_404;

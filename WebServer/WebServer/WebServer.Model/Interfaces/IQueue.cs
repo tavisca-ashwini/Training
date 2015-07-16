@@ -5,7 +5,8 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebServer.Exception
+
+namespace WebServer.Model.Interfaces
 {
     public interface IQueue
     {

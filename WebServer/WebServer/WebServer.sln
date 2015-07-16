@@ -5,10 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer.Host", "WebServer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer.Model", "WebServer.Model\WebServer.Model.csproj", "{96C6F16F-61C7-4D06-B962-E382669FCA01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer.Handler", "WebServer.Handler\WebServer.Handler.csproj", "{719046B8-B26D-473C-BF2C-CFF6235AB5C4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer.Interfaces", "WebServer.Exception\WebServer.Interfaces.csproj", "{4E6ED31B-599B-4937-B17E-DAC065956CE7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +19,6 @@ Global
 		{96C6F16F-61C7-4D06-B962-E382669FCA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96C6F16F-61C7-4D06-B962-E382669FCA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96C6F16F-61C7-4D06-B962-E382669FCA01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{719046B8-B26D-473C-BF2C-CFF6235AB5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{719046B8-B26D-473C-BF2C-CFF6235AB5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{719046B8-B26D-473C-BF2C-CFF6235AB5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{719046B8-B26D-473C-BF2C-CFF6235AB5C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E6ED31B-599B-4937-B17E-DAC065956CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E6ED31B-599B-4937-B17E-DAC065956CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E6ED31B-599B-4937-B17E-DAC065956CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E6ED31B-599B-4937-B17E-DAC065956CE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

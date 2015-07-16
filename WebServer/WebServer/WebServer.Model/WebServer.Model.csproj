@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,6 +45,10 @@
     <Compile Include="ErrorCodes.cs" />
     <Compile Include="Errors.cs" />
     <Compile Include="InProcessQueue.cs" />
+    <Compile Include="Interfaces\FileHandler.cs" />
+    <Compile Include="Interfaces\Handler.cs" />
+    <Compile Include="Interfaces\IProcessor.cs" />
+    <Compile Include="Interfaces\IQueue.cs" />
     <Compile Include="Listener.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="ResourceUnavailable.cs" />

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebServer.Model;
 
-namespace WebServer.Interfaces
+
+namespace WebServer.Model
 {
     public interface IProcessor
     {
