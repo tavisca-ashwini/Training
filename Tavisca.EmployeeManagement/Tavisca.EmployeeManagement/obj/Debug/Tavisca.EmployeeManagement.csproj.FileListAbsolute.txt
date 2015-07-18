@@ -1,0 +1,7 @@
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\bin\Tavisca.EmployeeManagement.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\bin\Tavisca.EmployeeManagement.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\obj\Debug\Tavisca.EmployeeManagement.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\obj\Debug\Tavisca.EmployeeManagement.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\obj\Debug\Tavisca.EmployeeManagement.csprojResolveAssemblyReference.cache
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\bin\Newtonsoft.Json.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement\bin\Newtonsoft.Json.xml

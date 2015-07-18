@@ -1,0 +1,15 @@
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\obj\Debug\Tavisca.EmployeeManagement.Translator.csprojResolveAssemblyReference.cache
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.Translator.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.Translator.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\obj\Debug\Tavisca.EmployeeManagement.Translator.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\obj\Debug\Tavisca.EmployeeManagement.Translator.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.DataContract.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.Model.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.ServiceContract.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Newtonsoft.Json.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.FileHandler.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.Model.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.DataContract.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.ServiceContract.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Newtonsoft.Json.xml
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.Translator\bin\Debug\Tavisca.EmployeeManagement.FileHandler.pdb

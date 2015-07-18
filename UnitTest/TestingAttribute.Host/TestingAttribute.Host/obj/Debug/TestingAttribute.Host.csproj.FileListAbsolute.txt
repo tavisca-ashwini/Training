@@ -8,3 +8,6 @@ D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribu
 D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribute.Host.pdb
 D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.CustomAttribute.dll
 D:\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.CustomAttribute.pdb
+D:\Training_1\UnitTest\TestingAttribute.Host\TestingAttribute.Host\bin\Debug\TestingAttribute.Host.exe.config
+D:\Training_1\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribute.Host.exe
+D:\Training_1\UnitTest\TestingAttribute.Host\TestingAttribute.Host\obj\Debug\TestingAttribute.Host.pdb

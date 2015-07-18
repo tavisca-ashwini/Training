@@ -1,0 +1,13 @@
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\obj\Debug\Tavisca.EmployeeManagement.Model.csprojResolveAssemblyReference.cache
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.Model.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.Model.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.FileHandler.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.FileHandler.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Newtonsoft.Json.xml
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\obj\Debug\Tavisca.EmployeeManagement.Model.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\obj\Debug\Tavisca.EmployeeManagement.Model.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.ServiceContract.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.DataContract.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.ServiceContract.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.DataContract.pdb

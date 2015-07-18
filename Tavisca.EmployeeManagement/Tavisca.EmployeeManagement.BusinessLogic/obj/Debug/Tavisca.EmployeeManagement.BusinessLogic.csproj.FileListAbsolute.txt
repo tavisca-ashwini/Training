@@ -1,0 +1,5 @@
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.BusinessLogic.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\bin\Debug\Tavisca.EmployeeManagement.BusinessLogic.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\obj\Debug\Tavisca.EmployeeManagement.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\obj\Debug\Tavisca.EmployeeManagement.BusinessLogic.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.BusinessLogic\obj\Debug\Tavisca.EmployeeManagement.BusinessLogic.pdb

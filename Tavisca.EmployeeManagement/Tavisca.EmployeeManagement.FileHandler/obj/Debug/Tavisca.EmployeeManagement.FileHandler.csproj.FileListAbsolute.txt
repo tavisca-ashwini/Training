@@ -1,0 +1,5 @@
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.FileHandler\bin\Debug\Tavisca.EmployeeManagement.FileHandler.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.FileHandler\bin\Debug\Tavisca.EmployeeManagement.FileHandler.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.FileHandler\obj\Debug\Tavisca.EmployeeManagement.FileHandler.csprojResolveAssemblyReference.cache
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.FileHandler\obj\Debug\Tavisca.EmployeeManagement.FileHandler.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.FileHandler\obj\Debug\Tavisca.EmployeeManagement.FileHandler.pdb

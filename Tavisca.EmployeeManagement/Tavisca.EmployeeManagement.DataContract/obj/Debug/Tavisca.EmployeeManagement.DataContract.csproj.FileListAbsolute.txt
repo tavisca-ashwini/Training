@@ -1,0 +1,5 @@
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.DataContract\bin\Debug\Tavisca.EmployeeManagement.DataContract.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.DataContract\bin\Debug\Tavisca.EmployeeManagement.DataContract.pdb
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.DataContract\obj\Debug\Tavisca.EmployeeManagement.DataContract.csprojResolveAssemblyReference.cache
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.DataContract\obj\Debug\Tavisca.EmployeeManagement.DataContract.dll
+D:\EmployeeManagement\Tavisca.EmployeeManagement\Tavisca.EmployeeManagement.DataContract\obj\Debug\Tavisca.EmployeeManagement.DataContract.pdb
