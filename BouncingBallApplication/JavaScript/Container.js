@@ -2,7 +2,7 @@
 
 window.BouncingBall.boundryCondition = function () {
 
-     Bouheight = window.innerHeight - 100;
+    var height = window.innerHeight - 100;
     var width = window.innerWidth - 100;
 
     if (window.BouncingBall.yPosition < 0) {
@@ -16,7 +16,7 @@ window.BouncingBall.boundryCondition = function () {
 
     if (window.BouncingBall.xPosition < 0) {
         window.BouncingBall.xFlag = true;
-        window.BouncingBall.xPos = 0;
+        window.BouncingBall.xPosition = 0;
     }
     if (window.BouncingBall.xPosition >= (width)) {
         window.BouncingBall.xFlag = false;

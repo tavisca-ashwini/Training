@@ -24,6 +24,7 @@ window.BouncingBall.moveBall = function () {
     else {
         window.BouncingBall.xPosition = window.BouncingBall.xPosition - step;
     }
-}window.BouncingBall.start = function () {
+}
+window.BouncingBall.start = function () {
     setInterval(BouncingBall.moveBall, 20);
 }
