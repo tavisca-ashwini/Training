@@ -7,23 +7,19 @@ var block;
 var index;
 var context;
 
-//Instanciate Arrays
 window.onload = function () {
     filled = new Array();
     content = new Array();
     winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 4, 8], [2, 4, 6], [0, 3, 6], [1, 4, 7], [2, 5, 8]];
-
     for (var blocks = 0; blocks <= 8; blocks++) {
         filled[blocks] = false;
         content[blocks] = '';
     }
 }
-//Game methods
 function takeActionOnClick(canvasId) {
     block = "canvas" + canvasId;
     index = document.getElementById(block);
     context = index.getContext("2d");
-
     if (filled[canvasId - 1] == false) {
         if (turn % 2 == 0) {
             context.beginPath();
@@ -47,18 +43,18 @@ function takeActionOnClick(canvasId) {
         blockFilled++;
         checkWinner(content[canvasId - 1]);
         if (blockFilled == 9) {
-            alert("Game Completed!");
+            alert("Game Completed!! Draw Game !!");
             location.reload(true);
         }
     }
-    else {
+    else{
         alert("Block is already filled");
     }
 }
-function checkWinner(symbol) {
+function checkWinner(player) {
     for (var win = 0; win < winningCombinations.length; win++) {
-        if (content[winningCombinations[win][0]] == symbol && content[winningCombinations[win][1]] == symbol && content[winningCombinations[win][2]] == symbol) {
-            alert(symbol + " WON!");
+        if (content[winningCombinations[win][0]] == player && content[winningCombinations[win][1]] == player && content[winningCombinations[win][2]] == player) {
+            alert(player + " WON!");
         }
     }
 }
