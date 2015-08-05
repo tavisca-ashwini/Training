@@ -19,7 +19,7 @@ namespace CustomControl
             {
                 Pagination pagination = new Pagination();
                 HttpClient client = new HttpClient();
-                var pageResponse = client.GetData<Pagination>("http://localhost:53412/EmployeeService.svc/pagination/1/1");
+                var pageResponse = client.GetData<Pagination>("http://localhost:53412/EmployeeService.svc/pagination/1/" +GridViewRemark.PageIndex);
                 HttpCookie cookie = new HttpCookie("LoginDetails");
                 employeeId = cookie["emp_Id"];
                 GridViewRemark.VirtualItemCount = pageResponse.TotalPages;

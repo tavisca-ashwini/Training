@@ -10,7 +10,7 @@
 namespace CustomControl {
     
     
-    public partial class WebForm3 {
+    public partial class ChangePassword {
         
         /// <summary>
         /// Panel1 control.

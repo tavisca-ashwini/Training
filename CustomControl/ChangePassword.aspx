@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="CustomControl.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="CustomControl.ChangePassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
@@ -17,7 +17,7 @@
                     <asp:Label ID="EmailLabel" runat="server" Text="Enter Email Id" Font-Size="Medium"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TextBoxEmail" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxEmail" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword" BorderStyle="Ridge"></asp:TextBox>
 
                     <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server"
                         ErrorMessage="*" ForeColor="Red" ControlToValidate="TextBoxEmail"
@@ -30,7 +30,7 @@
                     <asp:Label ID="LabelOldPassword" runat="server" Text="Enter Old Password" Font-Size="Medium"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TextBoxOldPassword" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxOldPassword" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword" BorderStyle="Ridge"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorOldPassword" runat="server"
                         ErrorMessage="*" ForeColor="Red" ControlToValidate="TextBoxOldPassword"></asp:RequiredFieldValidator>
                 </td>
@@ -41,7 +41,7 @@
                     <asp:Label ID="LabelNewPassword" runat="server" Text="  Enter New Password" Font-Size="Medium"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TextBoxNewPassword" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxNewPassword" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword" BorderStyle="Ridge"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorNewPassword" runat="server" ErrorMessage="*"
                         ForeColor="Red" ControlToValidate="TextBoxNewPassword"></asp:RequiredFieldValidator>
                 </td>
@@ -52,7 +52,7 @@
                     <asp:Label ID="LabelConfirmPassword" runat="server" Text="  Enter Confirm Password" Font-Size="Medium"></asp:Label>
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="TextBoxConfirmPassword" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxConfirmPassword" runat="server" Height="31px" Width="230px" ValidationGroup="ChangePassword" BorderStyle="Ridge"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorConfirm" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="TextBoxConfirmPassword"></asp:RequiredFieldValidator>
                 </td>
             </tr>
@@ -60,12 +60,12 @@
             <tr>
                 <td class="auto-style1">
                     <asp:Button ID="SubmitPasswordButton" runat="server" Font-Size="Medium" Text="Submit" Width="134px"
-                        Font-Bold="true" Height="41px" OnClick="SubmitPasswordButton_Click" ValidationGroup="ChangePassword" />
+                        Font-Bold="true" Height="41px" OnClick="SubmitPasswordButton_Click" ValidationGroup="ChangePassword" BorderStyle="Ridge" />
                 </td>
 
                 <td class="auto-style4">
                     <asp:Button ID="ResetPasswordButton" runat="server" Font-Size="Medium" Text="Reset" Width="140px"
-                        Font-Bold="true" Height="41px" OnClick="ResetPasswordButton_Click" ValidationGroup="ChangePassword" />
+                        Font-Bold="true" Height="41px" OnClick="ResetPasswordButton_Click" ValidationGroup="ChangePassword" BorderStyle="Ridge" />
                 </td>
             </tr>
         </table>

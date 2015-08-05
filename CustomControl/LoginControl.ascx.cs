@@ -16,7 +16,15 @@ namespace CustomControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.Cookies["Email"] != null)
+                    UserIdText.Text = Request.Cookies["Email"].Value;
+                if (Request.Cookies["Password"] != null)
+                    PasswordText.Attributes.Add("value", Request.Cookies["Password"].Value);
+                if (Request.Cookies["Email"] != null && Request.Cookies["Password"] != null)
+                    RememberMeCheckbox.Checked = true;
+            } 
         }
         protected void LoginButton_Click(object sender, EventArgs e)
         {
@@ -24,19 +32,30 @@ namespace CustomControl
             details.Email = UserIdText.Text;
             details.Password = PasswordText.Text;
             HttpClient client = new HttpClient();
-            var response = client.UploadData<LoginDetails, Employee>("http://localhost:53412/EmployeeManagementService.svc/login", details);
-            HttpCookie cookie = new HttpCookie("LoginDetails");
-            cookie["Email"] = response.Email;
-            cookie["Password"] = response.Password;
-            Response.Cookies.Add(cookie);
 
-            if (response.Equals(null))
+            var response = client.UploadData<LoginDetails, EmployeeResponse>("http://localhost:53412/EmployeeManagementService.svc/login", details);
+            
+            
+            if (response.ResponseCodes.Codes=="500")
             {
-                Response.Write("Invalid Entries");
+                Response.Write(response.ResponseCodes.Message);
             }
             else
             {
-                if (string.Equals(response.Designation.Trim(), "hr", StringComparison.OrdinalIgnoreCase))
+                HttpCookie cookie = new HttpCookie("LoginDetails");
+                cookie["Email"] = response.EmployeeRequest.Email;
+                cookie["Password"] = response.EmployeeRequest.Password;
+                Response.Cookies.Add(cookie);
+
+                if (RememberMeCheckbox.Checked == true)
+                {
+                    Response.Cookies["Email"].Value = response.EmployeeRequest.Email; ;
+                    Response.Cookies["Email"].Expires = DateTime.Now.AddDays(1);
+                    Response.Cookies["Password"].Value = response.EmployeeRequest.Password;
+                    Response.Cookies["Password"].Expires = DateTime.Now.AddDays(1);
+                }
+                
+                if (string.Equals(response.EmployeeRequest.Designation.Trim(), "hr", StringComparison.OrdinalIgnoreCase))
                 {
                     Response.Redirect("http://localhost:49722/HR_Page.aspx");
                 }
@@ -45,6 +64,11 @@ namespace CustomControl
                     Response.Redirect("http://localhost:49722/Employee_Page.aspx");
                 }
             }
+        }
+
+        protected void PasswordCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

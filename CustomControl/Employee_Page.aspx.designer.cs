@@ -10,7 +10,7 @@
 namespace CustomControl {
     
     
-    public partial class WebForm2 {
+    public partial class Employee_Page {
         
         /// <summary>
         /// Employee_FetchRemark control.

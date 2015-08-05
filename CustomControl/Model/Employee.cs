@@ -33,7 +33,7 @@ namespace CustomControl.Model
             [DataMember]
         public string Designation { get; set; }
 
-        [DataMember]
+            [DataMember]
         public DateTime JoiningDate { get; set; }
 
             [DataMember]

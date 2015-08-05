@@ -8,33 +8,35 @@ using CustomControl.Model;
 
 namespace CustomControl
 {
-    public partial class WebForm3 : System.Web.UI.Page
+    public partial class ChangePassword : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void ResetPasswordButton_Click(object sender, EventArgs e)
-        {
-            TextBoxEmail.Text = "";
-            TextBoxOldPassword.Text = "";
-            TextBoxConfirmPassword.Text = "";
-            TextBoxNewPassword.Text = "";
-        }
-
         protected void SubmitPasswordButton_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
-           
-            employee.Email = TextBoxEmail.Text; 
-        
-            if(TextBoxNewPassword.Text != TextBoxConfirmPassword.Text)
+            ModifyPassword modify = new ModifyPassword();
+            HttpClient client = new HttpClient();
+            HttpCookie cookie = new HttpCookie("Logindetails");
+            modify.Email = cookie["Email"];
+            modify.OldPassword = TextBoxOldPassword.Text;
+            modify.NewPassword = TextBoxNewPassword.Text;
+            var response = client.UploadData<ModifyPassword, ModifyPasswordResponse>("http://localhost:53412/EmployeeManagementService.svc/changePassword", modify);
+            Response.Write(response.ResponseCodes.Message);
+
+            if (TextBoxConfirmPassword.Text != TextBoxNewPassword.Text)
             {
-                Console.WriteLine("Invalid entries");
+                Response.Write(response.ResponseCodes.Message);
             }
         }
 
-
+        protected void ResetPasswordButton_Click(object sender, EventArgs e)
+        {
+            TextBoxOldPassword.Text = "";
+            TextBoxNewPassword.Text = "";
+            TextBoxConfirmPassword.Text = ""; 
+        }
     }
 }

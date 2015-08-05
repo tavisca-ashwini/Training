@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace CustomControl
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class Employee_Page : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

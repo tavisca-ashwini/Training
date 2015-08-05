@@ -17,7 +17,8 @@
     <textarea id="TextAreaRemark" name="S1" style="height: 150px; width: 388px" runat="server"></textarea>
     <br />
     <br />
-    <asp:Button ID="AddRemarkButton" runat="server" Font-Bold="true" Font-Size="Medium" Height="41px" OnClick="AddRemarkButton_Click" Text="Add Remark" Width="144px" ValidationGroup="HRAddRemark" />
+    <asp:Button ID="AddRemarkButton" runat="server" Font-Bold="true" Font-Size="Medium" Height="41px" 
+        OnClick="AddRemarkButton_Click" Text="Add Remark" Width="144px" ValidationGroup="HRAddRemark" />
     <br />
     <br />
 

@@ -392,10 +392,16 @@
       <DependentUpon>LoginControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\EmployeeResponse.cs" />
     <Compile Include="Model\HttpClient.cs" />
     <Compile Include="Model\LoginDetails.cs" />
+    <Compile Include="Model\ModifyPassword.cs" />
+    <Compile Include="Model\ModifyPasswordResponse.cs" />
     <Compile Include="Model\Pagination.cs" />
     <Compile Include="Model\Remark.cs" />
+    <Compile Include="Model\RemarkResponse.cs" />
+    <Compile Include="Model\Response.cs" />
+    <Compile Include="Model\StatusCodes.cs" />
     <Compile Include="Model\Serializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

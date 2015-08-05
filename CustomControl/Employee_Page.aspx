@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Employee_Page.aspx.cs" Inherits="CustomControl.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Employee_Page.aspx.cs" Inherits="CustomControl.Employee_Page" %>
 
 <%@ Register Src="~/Employee_FetchRemark.ascx" TagPrefix="uc2" TagName="Employee_FetchRemark" %>
 
