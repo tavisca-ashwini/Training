@@ -1,0 +1,66 @@
+﻿@model LoginControl.Model.Employee
+
+@{
+    ViewBag.Title = "AddEmp";
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    @Html.ActionLink("Add Employee", "SaveEmployee", "Hr")
+                    @Html.ActionLink("Add Remark", "SaveRemark", "Hr")
+                    @Html.ActionLink("Change Password", "ChangePassword", "Hr")
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@using (Html.BeginForm("SaveEmployee", "Hr"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <h3> Add Employee</h3>
+    <form action="SaveEmployee" method="post">
+        <fieldset>
+            <legend>Add Employee Form</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.Title)
+                    @Html.TextBoxFor(m => m.Title)
+                    @Html.ValidationMessageFor(m => m.Title)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.FirstName)
+                    @Html.TextBoxFor(m => m.FirstName)
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.TextBoxFor(m => m.LastName)
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Phone)
+                    @Html.TextBoxFor(m => m.Phone)
+                    @Html.ValidationMessageFor(m => m.Phone)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Designation)
+                    @Html.TextBoxFor(m => m.Designation)
+                    @Html.ValidationMessageFor(m => m.Designation)
+                </li>
+                <li>
+                    @Html.Label(ViewData["Status"].ToString())
+                </li>
+            </ol>
+            <input type="submit" value="Add Employee" />
+        </fieldset>
+    </form>
+}

@@ -1,0 +1,46 @@
+﻿@model LoginControl.Model.Remark
+
+@{
+    ViewBag.Title = "EmployeeFetchRemark";
+    List<string> columns = new List<string>();
+    columns.Add("Text");
+    columns.Add("CreateTimestamp");
+    WebGrid remarkGrid = new WebGrid(rowsPerPage: ViewBag.PageSize, canPage: true);
+    remarkGrid.Bind(source: Model, columnNames: columns, autoSortAndPage: false, rowCount: ViewBag.TotalRecords);
+}
+
+<style type="text/css">
+    table.grid {
+        font-family: Arial;
+        font-size: 12px;
+        color: black;
+        border-width: 2px;
+        border-color: black;
+        border-collapse: collapse;
+    }
+
+        table.grid th {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            padding: 10px;
+            background-color: #808080;
+        }
+
+        table.grid th {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            padding: 10px;
+            background-color: #808080;
+        }
+</style>
+
+<h2>View Remarks</h2>
+<div>
+    @remarkGrid.GetHtml(tableStyle: "grid" ,
+    columns:remarkGrid.Columns(
+    remarkGrid.Column("Text","Remark"),
+    remarkGrid.Column("CreateTimestamp","RemarkTime")
+))
+</div>

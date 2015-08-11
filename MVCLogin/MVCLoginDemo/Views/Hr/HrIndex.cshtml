@@ -1,0 +1,22 @@
+﻿@model LoginControl.Model.Response
+
+@{
+    ViewBag.Title = "HrIndex";
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    @Html.ActionLink("Add Employee", "SaveEmployee", "Hr")
+                    @Html.ActionLink("Add Remark", "SaveRemark", "Hr")
+                    @Html.ActionLink("Change Password", "ChangePassword", "Hr")
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@using (Html.BeginForm("AddEmp", "Hr"))
+{
+}

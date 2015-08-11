@@ -1,0 +1,46 @@
+﻿@model LoginControl.Model.Remark
+
+@{
+    ViewBag.Title = "AddRemark";
+}
+
+<form action="/Hr/SaveRemark" method="post">
+    <section id="addRemarkForm">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            @Html.ActionLink("Add Employee", "SaveEmployee", "Hr")
+                            @Html.ActionLink("Add Remark", "SaveRemark", "Hr")
+                            @Html.ActionLink("Change Password", "ChangePassword", "Hr")
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm("SaveRemark", "Hr"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <h2>Add Remark</h2>
+            <fieldset>
+                <legend>Add Remark Form</legend>
+                <ol>
+                    <li>
+                        @Html.DropDownList("Employee", ViewData["EmpList"] as List<SelectListItem>)
+                    </li>
+                    <li>
+                        @Html.LabelFor(m => m.Text)
+                        @Html.TextAreaFor(m => m.Text)
+                        @Html.ValidationMessageFor(m => m.Text)
+                    </li>
+                    <li>
+                    @Html.Label(ViewData["Status"].ToString())
+                </li>
+                </ol>
+                <input type="submit" value="Add Remark" />
+            </fieldset>
+        }
+    </section>
+</form>
